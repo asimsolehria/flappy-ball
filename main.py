@@ -9,9 +9,9 @@ height = 530
 size = (width, height)
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Flappy Ball")
-ipipe = pygame.image.load("sprites/pipe.png")
+ipipe = pygame.image.load("sprites/pipe.bmp")
 pipe = pygame.transform.rotate(ipipe, 180)
-ball = pygame.image.load("sprites/small-ball.png")
+ball = pygame.image.load("sprites/small-ball.bmp")
 font = pygame.font.SysFont(None, 50)
 
 
@@ -35,7 +35,7 @@ def game_loop():
 
     while running:
         while gameOver == True:
-            screen.blit(pygame.image.load("sprites/game-over.jpg"), [0, 0])
+            screen.blit(pygame.image.load("sprites/game-over.bmp"), [0, 0])
             message_to_screen("Game Over! Press P to play or Q to quit", (255, 0, 0), 100, height - 100)
             message_to_screen("Use space key to control the falling ball", (255, 255, 255), 100, 30)
             pygame.display.update()
